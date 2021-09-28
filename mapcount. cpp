@@ -3,7 +3,10 @@
 #include <string>
 using namespace std;
 
-int mlap[500][500],vis[500][500],ans,xc[4]= {-1,1,0,0},yc[4]= {0,0,-1,1};
+int mlap[500][500],
+vis[500][500],
+ans,xc[4]= {-1,1,0,0},
+yc[4]= {0,0,-1,1};
 
 int x,y;
 struct secter
@@ -86,8 +89,12 @@ int main()
       for(int i=0; i<=(x+1); i++)
     for(int j=0; j<=(y+1); j++)
     {
-      if(!i||i==(x+1))  mlap[i][j]=1,vis[i][j]=1;
-      if(!j||j==(y+1))  mlap[i][j]=1,vis[i][j]=1;
+      if(!i||i==(x+1)) 
+      mlap[i][j]=1,
+      vis[i][j]=1;
+      if(!j||j==(y+1))  
+      mlap[i][j]=1,
+      vis[i][j]=1;
     }
   bfs(1,1);
   for(int i=1; i<=x; i++)
